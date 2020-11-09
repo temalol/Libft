@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+         #
+#    By: nmustach <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/17 16:38:23 by nmustach          #+#    #+#              #
-#    Updated: 2019/09/22 20:13:14 by nmustach         ###   ########.fr        #
+#    Updated: 2020/11/09 02:57:26 by nmustach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,27 +23,25 @@ SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
       ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c \
       ft_strjoin.c ft_strtrim.c ft_strsplit.c ft_itoa.c \
       ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
-      ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-	ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c \
-	ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c
-HEAD = ./
+      ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c 
 BIN = $(SRCS:.c=.o)  
+HEAD = ./libft.h
 
-.PHONY: clean fclean all re
 
 all: $(NAME)
 
-$(NAME): $(BIN)
+$(NAME):$(BIN)
 	ar rc $(NAME) $(BIN)
 	ranlib $(NAME)
-     
-      %.o : %.c $(HEADER)\
-      gcc -c $< -I$(HEAD) -Wall -Wextra -Werror
+
+%.o : %.c $(HEAD)
+	@gcc -Wall -Wextra -Werror -c $< -o $@
+	@echo 'Compile $<'
 
 clean:
 	rm -f $(BIN)
 
 fclean: clean 
-	rm -f $(NAME) 
+	rm -f $(NAME)
 
 re: fclean all
