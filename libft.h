@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 19:27:53 by nmustach          #+#    #+#             */
-/*   Updated: 2020/11/22 15:53:34 by nmustach         ###   ########.fr       */
+/*   Updated: 2020/11/22 18:10:54 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,6 @@ void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void			ft_strrev(char *input);
 int				ft_is_number(char *input);
+size_t			ft_lst_size(t_list *lst);
+
 #endif
