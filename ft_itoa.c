@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 15:34:34 by nmustach          #+#    #+#             */
-/*   Updated: 2020/11/21 16:05:07 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:14:41 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static char	*fillarray(char *str, int len, int n)
 {
-	int flag;
+	int	flag;
 	int	b;
 
 	if (n < 0)
@@ -67,7 +67,7 @@ static	int	count_numbers(int n)
 	return (cnt + 1);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
@@ -77,7 +77,7 @@ char		*ft_itoa(int n)
 	if (n == 0)
 		return (zero_case());
 	len = count_numbers(n);
-	str = (char*)malloc(sizeof(char) * (len + 1));
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
 	str[len] = '\0';

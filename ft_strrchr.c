@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 22:05:30 by nmustach          #+#    #+#             */
-/*   Updated: 2020/11/21 15:02:22 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:20:00 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	len = 0;
 	len = ft_strlen(s);
 	occ = (char)(c);
-	src = (char*)(s);
+	src = (char *)(s);
 	while (len >= 0)
 	{
 		if (src[len] == occ)

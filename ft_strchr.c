@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmustach <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 22:02:30 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/14 22:04:28 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:15:24 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 
 	cnt = 0;
 	occ = (char)(c);
-	src = (char*)(s);
+	src = (char *)(s);
 	while (src[cnt])
 	{
 		if (src[cnt] == occ)

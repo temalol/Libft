@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 22:30:27 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/19 14:59:45 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:22:10 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_strclr(char *s)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (s != NULL)

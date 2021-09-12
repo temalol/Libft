@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmustach <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 22:04:08 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/12 22:13:17 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:14:15 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strcat(char *restrict s1, const char *restrict s2)
 
 	cnt = 0;
 	len = 0;
-	str2 = (char*)(s2);
+	str2 = (char *)(s2);
 	while (s1[len])
 		len++;
 	while (str2[cnt])

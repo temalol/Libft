@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmustach <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 21:31:48 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/14 21:35:22 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:12:10 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memccpy(void *restrict dst,
 	char	occ;
 
 	cnt = 0;
-	s = (char*)(src);
-	d = (char*)(dst);
+	s = (char *)(src);
+	d = (char *)(dst);
 	occ = (unsigned char)(c);
 	while (n)
 	{

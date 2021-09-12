@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmustach <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 22:14:06 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/12 22:18:21 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:18:28 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
-	int len;
-	int cnt;
+	int	len;
+	int	cnt;
 
 	len = 0;
 	cnt = 0;

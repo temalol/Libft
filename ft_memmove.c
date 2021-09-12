@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 16:03:57 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/19 16:20:25 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:13:00 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (dst == NULL && src == NULL)
 		return (NULL);
 	i = 0;
-	d = (unsigned char*)(dst);
-	s = (unsigned char*)(src);
+	d = (unsigned char *)(dst);
+	s = (unsigned char *)(src);
 	if (src < dst)
 	{
 		while (len)

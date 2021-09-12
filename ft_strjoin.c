@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/15 14:32:37 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/19 17:43:12 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:22:36 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	fillstr(char const *s1, char const *s2, char *new)
 	}
 }
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new;
 	int		s1len;
@@ -42,7 +42,7 @@ char		*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
-	new = (char*)malloc((1 + s1len + s2len) * sizeof(char));
+	new = (char *)malloc((1 + s1len + s2len) * sizeof(char));
 	if (new == NULL)
 		return (NULL);
 	new[s1len + s2len] = '\0';

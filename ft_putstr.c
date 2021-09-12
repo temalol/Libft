@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 21:09:24 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/19 15:52:39 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:13:50 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr(char const *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (str != NULL)

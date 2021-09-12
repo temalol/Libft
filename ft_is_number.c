@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 15:41:30 by nmustach          #+#    #+#             */
-/*   Updated: 2020/11/22 15:51:49 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 14:55:57 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_is_number(char *input)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (input[i] == '-' || input[i] == '+')

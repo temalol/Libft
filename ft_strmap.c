@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 18:43:22 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/19 15:25:39 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:17:59 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmap(char const *s, char (*f) (char))
 		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
-	new = (char*)malloc((1 + len) * sizeof(char));
+	new = (char *)malloc((1 + len) * sizeof(char));
 	if (new == NULL)
 		return (NULL);
 	while (s[i])

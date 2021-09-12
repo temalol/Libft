@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmustach <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 20:46:51 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/14 22:27:36 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 14:56:32 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	unsigned char ch;
+	unsigned char	ch;
 
 	ch = (unsigned char)(c);
 	if (c >= 32 && c <= 126)

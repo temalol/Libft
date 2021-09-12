@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/15 14:58:00 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/19 15:50:37 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:20:47 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	getend(char const *s)
 	return (len + 1);
 }
 
-char		*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
 	size_t		i;
 	size_t		n;
@@ -43,7 +43,7 @@ char		*ft_strtrim(char const *s)
 		return (ft_strdup("\0"));
 	while ((s[stind] == ' ') || (s[stind] == '\n') || (s[stind] == '\t'))
 		stind++;
-	new = (char*)malloc((1 + (endind - stind)) * sizeof(char));
+	new = (char *)malloc((1 + (endind - stind)) * sizeof(char));
 	if (new == NULL)
 		return (NULL);
 	while (stind < endind)

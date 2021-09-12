@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 18:28:04 by nmustach          #+#    #+#             */
-/*   Updated: 2020/11/22 18:56:42 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:04:46 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lst_rev(t_list **list)
 {
-	t_list *tmpnext;
-	t_list *tmp2;
+	t_list	*tmpnext;
+	t_list	*tmp2;
 
 	if ((*list)->next != NULL)
 	{

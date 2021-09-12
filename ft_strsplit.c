@@ -6,13 +6,13 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/15 16:47:09 by nmustach          #+#    #+#             */
-/*   Updated: 2019/09/22 19:47:38 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:25:44 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	void		freemem(char **col, size_t colcnt)
+static	void	freemem(char **col, size_t colcnt)
 {
 	if (colcnt > 0)
 		colcnt--;
@@ -23,7 +23,7 @@ static	void		freemem(char **col, size_t colcnt)
 	}
 }
 
-static size_t		rowfill(char **col, const char *s, int i, char c)
+static size_t	rowfill(char **col, const char *s, int i, char c)
 {
 	char	*row;
 	size_t	rowind;
@@ -41,7 +41,7 @@ static size_t		rowfill(char **col, const char *s, int i, char c)
 		i++;
 		wlen++;
 	}
-	row = (char*)malloc((1 + wlen) * sizeof(char));
+	row = (char *)malloc((1 + wlen) * sizeof(char));
 	if (row == NULL)
 		return (-1);
 	while (wlen--)
@@ -51,10 +51,10 @@ static size_t		rowfill(char **col, const char *s, int i, char c)
 	return (i);
 }
 
-static int			wc(const char *s, char c)
+static int	wc(const char *s, char c)
 {
-	size_t i;
-	size_t wc;
+	size_t	i;
+	size_t	wc;
 
 	i = 0;
 	wc = 0;
@@ -72,7 +72,7 @@ static int			wc(const char *s, char c)
 	return (wc);
 }
 
-char				**ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	size_t	wordsnum;
 	size_t	colcnt;
@@ -84,7 +84,7 @@ char				**ft_strsplit(char const *s, char c)
 	colcnt = 0;
 	wordind = 0;
 	wordsnum = wc(s, c);
-	if (!(col = (char**)malloc((1 + wordsnum) * sizeof(char*))))
+	if (!(col = (char **)malloc((1 + wordsnum) * sizeof(char *))))
 		return (NULL);
 	while (wordsnum--)
 	{
