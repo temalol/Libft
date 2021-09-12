@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/15 16:47:09 by nmustach          #+#    #+#             */
-/*   Updated: 2021/09/12 15:25:44 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:55:08 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,12 @@ static int	wc(const char *s, char c)
 	return (wc);
 }
 
+void	destroy_array(char **col, size_t colcnt)
+{
+	freemem(col, colcnt);
+	free(col);
+}
+
 char	**ft_strsplit(char const *s, char c)
 {
 	size_t	wordsnum;
@@ -84,15 +90,15 @@ char	**ft_strsplit(char const *s, char c)
 	colcnt = 0;
 	wordind = 0;
 	wordsnum = wc(s, c);
-	if (!(col = (char **)malloc((1 + wordsnum) * sizeof(char *))))
+	col = (char **)malloc((1 + wordsnum) * sizeof(char *));
+	if (col == NULL)
 		return (NULL);
 	while (wordsnum--)
 	{
 		wordind = rowfill(&col[colcnt], s, wordind, c);
 		if (wordind == (size_t)(-1))
 		{
-			freemem(col, colcnt);
-			free(col);
+			destroy_array(col, colcnt);
 			return (NULL);
 		}
 		colcnt++;
