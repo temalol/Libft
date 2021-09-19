@@ -6,7 +6,7 @@
 #    By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/17 16:38:23 by nmustach          #+#    #+#              #
-#    Updated: 2021/09/19 16:20:31 by nmustach         ###   ########.fr        #
+#    Updated: 2021/09/19 16:21:52 by nmustach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ $(OBJDIR)%.o : %.c $(HEAD)
 
 clean:
 	@echo 'Deleting object files...'
-	@rm -f $(BIN)
+	@rm -rf $(OBJDIR)
 	@echo 'Done'
 
 fclean:
