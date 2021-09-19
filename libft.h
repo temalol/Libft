@@ -6,7 +6,7 @@
 /*   By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 19:27:53 by nmustach          #+#    #+#             */
-/*   Updated: 2021/09/12 15:37:45 by nmustach         ###   ########.fr       */
+/*   Updated: 2021/09/19 17:39:17 by nmustach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ void			ft_strrev(char *input);
 int				ft_is_number(char *input);
 size_t			ft_lst_size(t_list *lst);
 void			ft_lst_rev(t_list **list);
+char			*ft_tolower_str(char *str);
 
 #endif
