@@ -6,25 +6,29 @@
 #    By: nmustach <nmustach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/17 16:38:23 by nmustach          #+#    #+#              #
-#    Updated: 2020/11/22 18:56:13 by nmustach         ###   ########.fr        #
+#    Updated: 2021/09/19 16:20:31 by nmustach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
+OBJDIR = objs/
+
 SRCS = $(wildcard ft_*.c)
 
-BIN = $(SRCS:.c=.o) 
+BIN = $(addprefix $(OBJDIR),$(SRCS:.c=.o))
+
 HEAD = ./libft.h
 
 all: $(NAME)
 
 $(NAME):$(BIN)
-	@echo 'Build libft'
+	@echo 'Link libft'
 	@ar rc $(NAME) $(BIN)
 	@ranlib $(NAME)
 
-%.o : %.c $(HEAD)
+$(OBJDIR)%.o : %.c $(HEAD)
+	@mkdir -p $(OBJDIR)
 	@gcc -Wall -Wextra -Werror -c $< -o $@
 	@echo 'Compile $<'
 
@@ -36,7 +40,7 @@ clean:
 fclean:
 	@echo 'Deleting object files and libft.a ...'
 	@rm -f $(NAME)
-	@rm -f $(BIN)
+	@rm -rf $(OBJDIR)
 	@echo 'Done'
 	
 re: fclean all
